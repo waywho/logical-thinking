@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170609100560) do
+ActiveRecord::Schema.define(version: 20170610035358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -163,4 +163,25 @@ ActiveRecord::Schema.define(version: 20170609100560) do
     t.index ["unlock_token"], name: "index_fae_users_on_unlock_token", unique: true, using: :btree
   end
 
+  create_table "thought_categories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "thoughts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.string   "meta_description"
+    t.text     "introduction"
+    t.text     "body"
+    t.date     "date"
+    t.integer  "thought_category_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["thought_category_id"], name: "index_thoughts_on_thought_category_id", using: :btree
+  end
+
+  add_foreign_key "thoughts", "thought_categories"
 end

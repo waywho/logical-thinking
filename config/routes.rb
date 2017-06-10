@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+    resources :thoughts
+    resources :thought_categories
   end
   # mount Fae below your admin namespec
   mount Fae::Engine => '/admin'

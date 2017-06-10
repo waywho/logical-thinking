@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  slug: MyString
+  meta_description: MyString
+  introduction: MyText
+  body: MyText
+  date: 2017-06-10
+  thought_category: one
+
+two:
+  title: MyString
+  slug: MyString
+  meta_description: MyString
+  introduction: MyText
+  body: MyText
+  date: 2017-06-10
+  thought_category: two

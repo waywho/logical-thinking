@@ -25,7 +25,16 @@ module Fae
 
     def structure
       [
+        item('Thought Categories', path: admin_thought_categories_path),
+        item('Thoughts', path: admin_thoughts_path),
         # scaffold inject marker
+        item('Pages', subitems: [
+            item('All', path: fae.pages_path),
+          item('Home', path: fae.edit_content_block_path('home')),
+          item('About Us', path: fae.edit_content_block_path('about_us')),
+          item('What We Do', path: fae.edit_content_block_path('what_we_do'))
+          item('Contact Us', path: fae.edit_content_block_path('contact_us')),
+        ])
       ]
     end
 
