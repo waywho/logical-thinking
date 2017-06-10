@@ -14,10 +14,6 @@ class HomePage < Fae::StaticPage
   end
 
   has_fae_image :hero_image
-  has_many :home_gallery_images, -> { where(attached_as: 'home_gallery_images') },
-    as: :imageable,
-    class_name: '::Fae::Image',
-    dependent: :destroy
-  accepts_nested_attributes_for :home_gallery_images, allow_destroy: true
+
 
 end
