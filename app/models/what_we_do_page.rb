@@ -5,13 +5,11 @@ class WhatWeDoPage < Fae::StaticPage
   # required to set the has_one associations, Fae::StaticPage will build these associations dynamically
   def self.fae_fields
     {
+      meta_description: { type: Fae::TextField },
       introduction: { type: Fae::TextArea },
       body: { type: Fae::TextArea },
-      header_image: { type: Fae::Image },
-      meta_description: { type: Fae::TextField }
+      header_image: { type: Fae::Image }
     }
   end
-
-  has_fae_image :header_image
 
 end

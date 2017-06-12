@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+        <div data-component="sticky">
+            <%= render "layouts/nav"%>
+        </div>
+        <div class="wrapper w80">
+            <%= yield %>
+        </div>
+    <footer class="row">
+        <%= render "layouts/footer" %>
+    </footer>
   </body>
 </html>

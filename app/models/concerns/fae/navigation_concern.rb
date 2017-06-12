@@ -27,6 +27,8 @@ module Fae
       [
         item('Thought Categories', path: admin_thought_categories_path),
         item('Thoughts', path: admin_thoughts_path),
+        item('Team Members', path: admin_team_members_path),
+        item('Services', path: admin_services_path),
         # scaffold inject marker
         item('Pages', subitems: [
             item('All', path: fae.pages_path),

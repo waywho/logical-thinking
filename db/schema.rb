@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170610035358) do
+ActiveRecord::Schema.define(version: 20170612213815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,6 +161,24 @@ ActiveRecord::Schema.define(version: 20170610035358) do
     t.index ["reset_password_token"], name: "index_fae_users_on_reset_password_token", unique: true, using: :btree
     t.index ["role_id"], name: "index_fae_users_on_role_id", using: :btree
     t.index ["unlock_token"], name: "index_fae_users_on_unlock_token", unique: true, using: :btree
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "examples"
+    t.integer  "position"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "team_members", force: :cascade do |t|
+    t.string   "name"
+    t.string   "role"
+    t.text     "biography"
+    t.integer  "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "thought_categories", force: :cascade do |t|

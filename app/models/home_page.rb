@@ -13,7 +13,4 @@ class HomePage < Fae::StaticPage
     }
   end
 
-  has_fae_image :hero_image
-
-
 end

@@ -1,0 +1,37 @@
+<div class="row gutters">
+    <div id="hero-image" class="col col-6 lt-blue row">
+        <div class='hero-text col push-middle'>
+            <h2 class="title"><%= @home_page.hero_text.content %></h2>
+            <p class="large"><%= @home_page.body.content %></p>
+        </div>
+    </div>
+    <div id="media-grid" class="col col-6">
+        <div class="row gutters">
+            <div class="center-cropped col col-6" style="background-image: url('assets/oafsToC-sq.jpg');"></div>
+            <div class="center-cropped col col-6" style="background-image: url('assets/Project_Oracle_seminar_square.jpg');">
+            </div>
+            <div class="center-cropped col col-6" style="background-image: url('assets/WeiHsi with Stickies Sq.jpg');">
+            </div>
+            <div class="center-cropped col col-6" style="background-image: url('assets/maydayToC-sq.jpg');">
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="section-heading">
+    <h2>What We Do</h2>
+</div>
+<hr />
+<div class="service-section row gutters">
+    <% @services.each do |service| %>
+        <div class="col col-4">
+            <%= link_to what_we_do_path do %>
+                <div class="service">
+                    <h3><%= service.title %></h3>
+                    <p><%= service.description.truncate(150) %></p>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+</div>

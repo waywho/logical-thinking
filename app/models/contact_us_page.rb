@@ -6,7 +6,8 @@ class ContactUsPage < Fae::StaticPage
   def self.fae_fields
     {
       meta_description: { type: Fae::TextField },
-      introduction: { type: Fae::TextArea }
+      introduction: { type: Fae::TextArea },
+      body: { type: Fae::TextArea }
     }
   end
 
