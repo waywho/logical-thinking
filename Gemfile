@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'fae-rails'
 
+gem 'fog-aws'
+
 gem 'figaro'
 
 # Use Capistrano for deployment
