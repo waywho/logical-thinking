@@ -6,9 +6,11 @@ check out other thoughts: <%= render partial: 'thoughts/thought_categories' %>
 <h1 class="title"><%= @thought.title %></h1>
 <br />
 
+<% if @thought.hero_image.asset.present? %>
 <div>
-    <%= image_tag @thought.hero_image.asset.url if !@thought.hero_image.nil? %>
+    <%= image_tag @thought.hero_image.asset.url %>
 </div>
+<% end %>
 <br />
 
 <div>
