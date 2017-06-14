@@ -2,7 +2,7 @@ module Fae
   class ImageUploader < CarrierWave::Uploader::Base
     include CarrierWave::MimeTypes
     include CarrierWave::RMagick
-    storage :fog
+
 
     # saves file size to DB
     process :save_file_size_in_model
