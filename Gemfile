@@ -38,6 +38,8 @@ gem 'fog-aws'
 
 gem 'figaro'
 
+gem 'trumbowyg_rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

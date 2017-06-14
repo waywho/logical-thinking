@@ -25,6 +25,7 @@ a {
     padding: 24px 20px;
     margin-bottom: 24px;
     border-bottom: 2px solid $color-lightgray;
+    background-color: white;
 }
 
 #main-nav li a {
@@ -41,14 +42,23 @@ nav li {
     margin: auto;
 }
 
+#max-wrapper {
+    max-width: 950px;
+}
+
+#media-grid {
+    min-height: 100%;
+}
+
 #media-grid > div > div {
     background-color: #00aff0;
     display: block;
-    min-height: 250px;
+    min-height: 100%;
     background-size: 100% auto;
 }
 
 #media-grid > div {
+    min-height: 100%;
     & > div:nth-child(1) {
         margin-bottom: 5px;
     }
@@ -77,6 +87,7 @@ nav li {
 
 .hero-text {
     margin: 0px 20px;
+    padding: 45px 45px;
 }
 
 .lt-blue {
@@ -93,10 +104,16 @@ nav li {
     padding: 50px 25px;
 }
 
-.service:hover {
+.hover:hover {
     background-color: $color-aluminum;
 }
 
 .section-heading {
     text-align: center;
+}
+
+.thought {
+    padding: 25px 35px;
+    margin: 20px 0px;
+
 }

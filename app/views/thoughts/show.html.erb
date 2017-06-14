@@ -1,0 +1,16 @@
+<div>
+check out other thoughts: <%= render partial: 'thoughts/thought_categories' %>
+</div>
+
+<br />
+<h1 class="title"><%= @thought.title %></h1>
+<br />
+
+<div>
+    <%= image_tag @thought.hero_image.asset.url %>
+</div>
+<br />
+
+<div>
+    <%= @thought.body.html_safe %>
+</div>

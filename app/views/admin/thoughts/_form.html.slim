@@ -4,8 +4,8 @@
   == render 'fae/shared/errors'
 
   main.content
-    = fae_input f, :title
-    = fae_input f, :slug
+    = fae_input f, :title, input_class: 'slugger'
+    = fae_input f, :slug, helper_text: 'Populated from title'
     = fae_input f, :meta_description
     = fae_input f, :introduction
     = fae_input f, :body

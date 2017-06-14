@@ -1,0 +1,15 @@
+<h1 class="title">Thoughts</h1>
+Welcome to our section of musings on how to improve the sector. Here you can find how-to articles, think pieces, and news.
+
+<div>
+<%= render partial: 'thoughts/thought_categories' %>
+</div>
+<% @thoughts.each do |thought| %>
+    <%= link_to thought_path(thought) do %>
+    <div class="thought hover">
+        <h3><%= thought.title %></h3>
+        <%= thought.body.html_safe.truncate(250) %><br />
+        <span class="label outline focus"><%= thought.thought_category.name %></span>
+    </div>
+    <% end %>
+<% end %>

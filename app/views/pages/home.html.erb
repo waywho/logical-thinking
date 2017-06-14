@@ -27,7 +27,7 @@
     <% @services.each do |service| %>
         <div class="col col-4">
             <%= link_to what_we_do_path do %>
-                <div class="service">
+                <div class="service hover">
                     <h3><%= service.title %></h3>
                     <p><%= service.description.truncate(150) %></p>
                 </div>
