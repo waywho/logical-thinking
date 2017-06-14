@@ -13,6 +13,13 @@
             <%= render "layouts/nav"%>
         </div>
         <div class="wrapper w80" id="max-wrapper">
+            <% if notice.present? %>
+            <p class="message"><%= notice %></p>
+            <% end %>
+
+            <% if alert.present? || flash[:error] %>
+            <p class="message error" data-component="message"><%= alert || flash[:error] %></p>
+            <% end %>
             <%= yield %>
         </div>
     <footer class="row">

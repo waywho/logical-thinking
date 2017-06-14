@@ -4,10 +4,10 @@
 
 <div>
 <p>
-<%= @page.introduction.content.html_safe if @page.introduction.present? %>
+<%= @page.introduction.content.html_safe if @page.introduction.content.present? %>
 </p>
 <p>
-<%= @page.body.content.html_safe if @page.body.present? %>
+<%= @page.body.content.html_safe if @page.body.content.present? %>
 </p>
 <% if @team_members.present? %>
     <% @team_members.each do |member| %>

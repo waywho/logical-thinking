@@ -6,7 +6,7 @@ check out other thoughts: <%= render partial: 'thoughts/thought_categories' %>
 <h1 class="title"><%= @thought.title %></h1>
 <br />
 
-<% if @thought.hero_image.asset.present? %>
+<% if @thought.hero_image.present? %>
 <div>
     <%= image_tag @thought.hero_image.asset.url %>
 </div>
