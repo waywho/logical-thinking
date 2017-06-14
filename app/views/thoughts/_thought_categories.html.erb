@@ -1,5 +1,5 @@
+<%= link_to thoughts_path do %><span class="label base focus">all</span><% end %>
 <% @thought_categories.each do |category| %>
-    <%= link_to thoughts_path do %><span class="label base focus">all</span><% end %>
     <%= link_to thoughts_path(category: category.name) do %>
         <span class="label base focus"><%= category.name %></span>
     <% end %>
