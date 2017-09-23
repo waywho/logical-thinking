@@ -1,6 +1,6 @@
 Fae.setup do |config|
 
-  config.devise_secret_key = '9eec416babf101e3e5af5fe88ac0b6dc7bf7854148854249bfbba0f4a4bb29ab72bbbba0637811cfb28557b37853580d2b1c0f8c5a54aa5b71c05b0434471048'
+  config.devise_secret_key = '35f7da24041d690d96fc5fb40bb8879ba8d83c4cb54ae95d62fe557dce1b199efc10accac23ba44bd43437466c933243316412e2ec86ada35344e26c56187cd1'
 
 
   ## devise_mailer_sender

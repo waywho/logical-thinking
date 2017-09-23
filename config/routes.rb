@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+  end
+  # mount Fae below your admin namespec
+  mount Fae::Engine => '/admin'
+
+
+  namespace :admin do
     resources :messages
     resources :services
     resources :team_members
     resources :thoughts
     resources :thought_categories
   end
-  # mount Fae below your admin namespec
-  mount Fae::Engine => '/admin'
 
   root 'pages#home'
 
